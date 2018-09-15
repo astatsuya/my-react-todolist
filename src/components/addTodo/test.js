@@ -20,5 +20,14 @@ describe('AddTodo component', () => {
       const component = shallow(<AddTodo />);
       expect(component.find('.todo-submit').length).toEqual(1);
     });
+
+    it('Should call the submitTodo function when clicked', () => {
+      const submitMock = jest.fn();
+      const component = mount(<AddTodo submitTodo={submitMock} />);
+
+      expect(submitMock.mock.calls.length).toEqual(0);
+      component.find('form').simulate('submit');
+      expect(submitMock.mock.calls.length).toEqual(1);
+    });
   });
 });
