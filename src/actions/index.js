@@ -23,7 +23,7 @@ const actions = {
     };
   },
 
-  undeleteTodo(id) {
+  undeleteTodo() {
     return {
       type: types.UNDELETE_TODO,
       id,
