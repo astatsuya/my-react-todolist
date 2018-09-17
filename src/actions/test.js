@@ -12,6 +12,7 @@ describe('Actions', () => {
       id: 1,
       text: todoText,
     };
+    expect(actions.submitTodo(todoText)).toEqual(expectedAction);
   });
 
   it('Should create an action to delete a todo', () => {
@@ -20,6 +21,6 @@ describe('Actions', () => {
       id: 1,
     };
 
-    expect(actions.submitTodo(todoText)).toEqual(expectedAction);
+    expect(actions.deleteTodo(1)).toEqual(expectedAction);
   });
 });
