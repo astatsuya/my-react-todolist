@@ -26,7 +26,6 @@ const actions = {
   undeleteTodo() {
     return {
       type: types.UNDELETE_TODO,
-      id,
     };
   },
 };
