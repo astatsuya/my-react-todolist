@@ -26,6 +26,7 @@ App.propTypes = {
 };
 
 const mapStateToProps = state => state.todoListApp;
+
 const mapDispatchToProps = dispatch => ({
   submitTodo: (text) => {
     if (text) {
