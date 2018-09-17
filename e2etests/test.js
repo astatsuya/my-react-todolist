@@ -40,6 +40,6 @@ describe('TodoList App', () => {
     browser.click('.todo-undelete');
     const actual = browser.element('.todo-text');
 
-    expect(actual.state).to.equal('failure');
+    expect(actual.state).to.equal('success');
   });
 });
