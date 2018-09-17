@@ -38,6 +38,7 @@ const AddTodo = ({ submitTodo, undeleteTodo }) => {
 
 AddTodo.propTypes = {
   submitTodo: PropTypes.func.isRequired,
+  undeleteTodo: PropTypes.func.isRequired,
 };
 
 export default AddTodo;
