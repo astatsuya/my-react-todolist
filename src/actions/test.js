@@ -29,6 +29,7 @@ describe('Actions', () => {
     const expectedAction = {
       type: types.UNDELETE_TODO,
     };
+
     expect(actions.undeleteTodo()).toEqual(expectedAction);
   });
 });
