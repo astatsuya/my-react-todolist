@@ -1,6 +1,7 @@
 /* global describe, it, browser */
 
 const expect = require('chai').expect;
+
 describe('TodoList App', () => {
   it('Should load with the right title', () => {
     browser.url('http://localhost:3000/');
@@ -14,10 +15,9 @@ describe('TodoList App', () => {
     browser.url('http://localhost:3000/');
     browser.element('.todo-input').setValue(todoText);
     browser.click('.todo-submit');
-    browser.click('.todo-delete');
-    const actual = browser.element('.todo-text');
+    const actual = browser.element('.todo-text').getText();
 
-    expect(actual.state).to.equal('failure');
+    expect(actual).to.equal(todoText);
   });
 
   it('Should allow me to delete a Todo', () => {
