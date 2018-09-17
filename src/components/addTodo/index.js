@@ -26,10 +26,10 @@ const AddTodo = ({ submitTodo, undeleteTodo }) => {
         </button>
 
         <button
-         className="todo-undelete"
-         onclick={() => undeleteTodo()}
+          className="todo-undelete"
+          onClick={() => undeleteTodo()}
         >
-         Undelete
+          Undelete
         </button>
       </form>
     </div>
