@@ -15,8 +15,9 @@ describe('TodoList App', () => {
     browser.url('http://localhost:3000/');
     browser.element('.todo-input').setValue(todoText);
     browser.click('.todo-submit');
-    const actual = browser.element('.todo-text').getText();
+    browser.click('.todo-delete');
+    const actual = browser.element('.todo-text');
 
-    expect(actual).to.equal(todoText);
+    expect(actual.state).to.equal('failure');
   });
 });
